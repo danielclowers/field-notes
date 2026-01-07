@@ -20,22 +20,58 @@ A "shell" file will need to be created so that writers can start adding release 
 
 This is a step by step process with commands included. Be sure to replace `4.17` and `4.18` with the versions you are working with.
 
-1. Check out the branch of the new version:
-   * `$ git checkout enterprise-4.18 ; git fetch upstream`
-2. Create a feature branch off of the enteprise branch:
-   * `$ git checkout -b CNV-XXXX`
-3. Rename the old version filename to the new version filename:
-   * `$ git mv virt/release_notes/virt-4-17-release-notes.adoc virt/release_notes/virt-4-18-release-notes.adoc`
-4. Replace all old version strings with the new version strings in the release notes file:
-   * `$ sed -i 's/virt-4-17/virt-4-18/g' virt/release_notes/virt-4-18-release-notes.adoc`
-5. Replace old version string with the new version string in the `_topic_map.yml` file:
-   * `$ sed -i 's/virt-4-17-release-notes/virt-4-18-release-notes/g' _topic_maps/_topic_map.yml`
-6. Replace old version string with the new version string in the OCP `addtl-release-notes.adoc` file:
-   * `$ sed -i 's/virt-4-17-release-notes/virt-4-18-release-notes/g' release_notes/addtl-release-notes.adoc`
-7. Remove all content under *New and changed features*, *Bug fixes*, and *Removed features* in the release-note file while making sure to leave the headers of the sections.
-8. For `Technology Preview features` you need to check if there has been a change in their status (for example, Tech Preview moving to General Availability). If there has been a change, then update the notes accordingly. If not, keep the release note as is.
-9. For `Deprecated and removed features` you need to check if there has been a change in their status (for example, a deprecated features has been removed).If there has been a change, then update the notes accordingly. If not, keep the release note as is.
-10. Save all changes and submit your pull request. Only merge review from the CNV team is necessary.
+**Step 1. Check out the branch of the new version**
+
+```bash
+git checkout enterprise-4.18
+git fetch upstream
+```
+
+**Step 2. Create a feature branch off of the enterprise branch**
+
+```bash
+git checkout -b CNV-XXXX
+```
+
+**Step 3. Rename the old version filename to the new version filename**
+
+```bash
+git mv virt/release_notes/virt-4-17-release-notes.adoc virt/release_notes/virt-4-18-release-notes.adoc
+```
+
+**Step 4. Replace all old version strings with the new version strings in the release notes file**
+
+```bash
+sed -i 's/virt-4-17/virt-4-18/g' virt/release_notes/virt-4-18-release-notes.adoc
+```
+
+**Step 5. Replace the old version string with the new version string in the `_topic_map.yml` file**
+
+```bash
+sed -i 's/virt-4-17-release-notes/virt-4-18-release-notes/g' _topic_maps/_topic_map.yml
+```
+
+**Step 6. Replace the old version string with the new version string in the OCP `addtl-release-notes.adoc` file**
+
+```bash
+sed -i 's/virt-4-17-release-notes/virt-4-18-release-notes/g' release_notes/addtl-release-notes.adoc
+```
+
+**Step 7. Remove section content from the release notes file**
+
+Remove all content under **New and changed features**, **Bug fixes**, and **Removed features**, while making sure to leave the section headers in place.
+
+**Step 8. Review Technology Preview features**
+
+Check whether any Technology Preview features have changed status (for example, moving from Technology Preview to General Availability). If there has been a change, update the notes accordingly. If not, leave the release note as is.
+
+**Step 9. Review Deprecated and removed features**
+
+Check whether any deprecated features have been removed. If there has been a change, update the notes accordingly. If not, leave the release note as is.
+
+**Step 10. Submit the pull request**
+
+Save all changes and submit your pull request. Only merge review from the CNV team is necessary.
 
 **Example PR**: [Link](https://github.com/openshift/openshift-docs/pull/79779)
 
