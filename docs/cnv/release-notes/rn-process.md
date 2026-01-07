@@ -50,20 +50,19 @@ For builds and tests to be successful in your GitHub pull request, you must open
 3. Create a new placeholder file with the new version name:
    * `$ touch virt/release_notes/virt-4-18-release-notes.adoc`
 4. Place the contents below into that file and save it.
-    ```
-    :_mod-docs-content-type: ASSEMBLY
-    [id="virt-4-18-release-notes"]
-    = {VirtProductName} release notes
-    include::_attributes/common-attributes.adoc[]
-    :context: virt-4-18-release-notes
 
-    toc::[]
+   ```text
+   :_mod-docs-content-type: ASSEMBLY
+   [id="virt-4-18-release-notes"]
+   = {VirtProductName} release notes
+   include::_attributes/common-attributes.adoc[]
+   :context: virt-4-18-release-notes
+   toc::[]
+   Do not add or edit release notes here. Edit release notes directly in the branch
+   that they are relevant for.
+   This file is here to allow builds to work.
+   ```
 
-    Do not add or edit release notes here. Edit release notes directly in the branch
-    that they are relevant for.
-
-    This file is here to allow builds to work.
-    ```
 5. Save all changes and submit your pull request. Only merge review from the CNV team is necessary.
 
 **Example PR**: [Link](https://github.com/openshift/openshift-docs/pull/79783)
