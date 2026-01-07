@@ -1,6 +1,6 @@
-## CNV Release Note Process
+# Release Notes Process
 
-### Jira Tickets
+## Jira Tickets
 
 You will be assigned four Jiras. Below are the Jiras and in the suggested order to work them:
 
@@ -9,7 +9,7 @@ You will be assigned four Jiras. Below are the Jiras and in the suggested order 
 3. Review the known issues and bug fixes
 4. Update and assemble the CNV release notes
 
-#### Release Note Shell File
+## Release Note Shell File
 
 A "shell" file will need to be created so that writers can start adding release notes. The process is essentially copying over the previous version's release note file and preparing it for the new version by:
 
@@ -39,7 +39,7 @@ This is a step by step process with commands included. Be sure to replace `4.17`
 
 **Example PR**: [Link](https://github.com/openshift/openshift-docs/pull/79779)
 
-### Release Note Placeholder File
+## Release Note Placeholder File
 
 For builds and tests to be successful in your GitHub pull request, you must open a separate PR to add a placeholder release notes file to the main branch. This is a step by step process with commands included. Be sure to replace `4.18` with the version you are working on.
 
@@ -68,5 +68,5 @@ For builds and tests to be successful in your GitHub pull request, you must open
 
 **Example PR**: [Link](https://github.com/openshift/openshift-docs/pull/79783)
 
-### Resources
+## Resources
 * [OpenShift Virtualization Release Note Process Google Doc](https://docs.google.com/document/d/1nXMbam5rbReArayNSHOzzlHBK5Pi0ezCn6vXmrdOoSY/edit?usp=sharing)
