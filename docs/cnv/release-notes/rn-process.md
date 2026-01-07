@@ -44,32 +44,42 @@ This is a step by step process with commands included. Be sure to replace `4.17`
 For builds and tests to be successful in your GitHub pull request, you must open a separate PR to add a placeholder release notes file to the main branch. This is a step by step process with commands included. Be sure to replace `4.18` with the version you are working on.
 
 1. Check out the branch of the new version:
-   - `$ git checkout main ; git fetch upstream`
 
-2. Create a feature branch off of the main branch:
-   - `$ git checkout -b CNV-XXXX`
+    ```bash
+    git checkout main
+    git fetch upstream
+    ```
 
-3. Create a new placeholder file with the new version name:
-   - `$ touch virt/release_notes/virt-4-18-release-notes.adoc`
+1. Create a feature branch off of the main branch:
 
-4. Place the contents below into that file and save it.
+    ```bash
+    git checkout -b CNV-XXXX
+    ```
 
-```text
-:_mod-docs-content-type: ASSEMBLY
-[id="virt-4-18-release-notes"]
-= {VirtProductName} release notes
-include::_attributes/common-attributes.adoc[]
-:context: virt-4-18-release-notes
+1. Create a new placeholder file with the new version name:
 
-toc::[]
+    ```bash
+    touch virt/release_notes/virt-4-18-release-notes.adoc
+    ```
 
-Do not add or edit release notes here. Edit release notes directly in the branch
-that they are relevant for.
+1. Place the contents below into that file and save it.
 
-This file is here to allow builds to work.
-```
+    ```text
+    :_mod-docs-content-type: ASSEMBLY
+    [id="virt-4-18-release-notes"]
+    = {VirtProductName} release notes
+    include::_attributes/common-attributes.adoc[]
+    :context: virt-4-18-release-notes
 
-5. Save all changes and submit your pull request. Only merge review from the CNV team is necessary.
+    toc::[]
+
+    Do not add or edit release notes here. Edit release notes directly in the branch
+    that they are relevant for.
+
+    This file is here to allow builds to work.
+    ```
+
+1. Save all changes and submit your pull request. Only merge review from the CNV team is necessary.
 
 **Example PR**: [Link](https://github.com/openshift/openshift-docs/pull/79783)
 
