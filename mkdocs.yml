@@ -1,3 +1,8 @@
 site_name: Field Notes
 site_url: https://danielclowers.github.io/field-notes/
 theme: readthedocs
+
+repo_name: danielclowers/field-notes
+repo_url: https://github.com/danielclowers/field-notes
+edit_uri: edit/main/docs/
+
