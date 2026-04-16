@@ -35,6 +35,16 @@ for f in $(grep -oP 'include::\K[^[]+' example-assembly.adoc \
 done
 ```
 
+## Snippets
+
+The following snippet is for all Additional Resources sections:
+
+```
+[role="_additional-resources"]
+[id="additional-resources_{context}"]
+== Additional resources
+```
+
 ## Resources
 
 <!-- WIP -->
